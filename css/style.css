@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.app {
+  padding: 1em 0.5em;
+}
+
+.app .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.app__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2em;
+  padding: 2em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000428), to(#004e92));
+  background: linear-gradient(to bottom, #000428, #004e92);
+}
+
+.app__title {
+  color: #fcfbff;
+  font-size: 3rem;
+}
+
+.app__input {
+  padding: 0.5em 1em;
+  width: 100%;
+  max-width: 700px;
+  height: 45px;
+  font-size: 1.8rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.app ::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+.app :-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+.app ::-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+.app ::placeholder {
+  color: #c5c5c5;
+}
+
+.app__btn {
+  margin: 0.5em 0;
+  padding: .6em 1.8em;
+  color: #000428;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  background: #fcfbff;
+  border: none;
+  border-radius: 38px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  cursor: pointer;
+}
+
+.app__btn:hover {
+  background: #c5c5c5;
+}
+
+.app :disabled {
+  background: gainsboro;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  pointer-events: none;
+}
+
+.app__bottom {
+  padding: 0 1em 1em;
+}
+
+.app__message {
+  height: 40px;
+  color: #000428;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 40px;
+}
+
+.app .task__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2em;
+}
+
+.app .task__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+  row-gap: 1em;
+  padding: 1em 2em;
+  color: #000428;
+  background: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.app .task__name {
+  font-size: 2.2rem;
+}
+
+.app .task__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .task__options button {
+  font-size: 1.7rem;
+  color: #f35382;
+  font-style: normal;
+  background: #f5f5f5;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  cursor: pointer;
+}
+
+.app .task__options button:nth-child(2) {
+  margin: 0 1em;
+}
+
+.app .task__options button .fas {
+  padding: .65em;
+  width: 40px;
+  height: 40px;
+}
+
+.app .task__options :disabled {
+  background: gainsboro;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  pointer-events: none;
+}
+
+.app .completed {
+  color: #c5c5c5;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.app .popup {
+  position: fixed;
+  bottom: -5px;
+  left: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 3em;
+  margin: 0 auto;
+  padding: 4em 2em;
+  max-width: 700px;
+  background: #d8d8d8;
+  border: 1px solid #a2a2a2;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-transition: -webkit-transform .6s;
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
+  -webkit-transform: translateY(102%);
+          transform: translateY(102%);
+  z-index: 100;
+}
+
+.app .popup__input {
+  padding: 0.5em 1em;
+  width: 100%;
+  max-width: 600px;
+  height: 45px;
+  font-size: 1.8rem;
+  border: 1px solid #a2a2a2;
+  border-radius: 5px;
+}
+
+.app .popup__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.app .popup__btn {
+  padding: .6em 1.8em;
+  color: #000428;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  background: #fcfbff;
+  border: none;
+  border-radius: 38px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  cursor: pointer;
+}
+
+.app .popup__btn:hover {
+  background: #c5c5c5;
+}
+
+.app .show-popup {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (min-width: 700px) {
+  .app .task__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=style.css.map */
